@@ -1,20 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../components/Home.vue'
-import Login from '../components/Login.vue'
-import Detail from '../components/goods/Detail.vue'
-import Checkout from "../components/order/Checkout";
-import Member from "../components/member/Member";
-import UserInfo from "../components/member/children/UserInfo";
-import OrderList from "../components/member/children/OrderList";
-import Cart from "../components/cart/Cart";
-import AddressList from "../components/member/children/AddressList";
-import Support from "../components/member/children/Support";
-import Payment from "../components/order/Payment";
-import OrderDetail from "../components/order/OrderDetail";
-import SearchList from "../components/goods/SearchList";
+import Home from '../page/Home.vue'
+import Login from '../page/Login.vue'
+import Detail from '../page/goods/Detail.vue'
+import Checkout from "../page/order/Checkout";
+import Member from "../page/member/Member";
+import UserInfo from "../page/member/children/UserInfo";
+import OrderList from "../page/member/children/OrderList";
+import Cart from "../page/cart/Cart";
+import AddressList from "../page/member/children/AddressList";
+import Payment from "../page/order/Payment";
+import OrderDetail from "../page/member/children/OrderDetail";
+import SearchList from "../page/goods/SearchList";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   // 去掉url中的#
@@ -36,8 +35,7 @@ export default new Router({
         {path: 'orderList', name: 'orderList', component: OrderList, meta: {requiresAuth: true}},
         {path: 'userInfo', name: 'userInfo', component: UserInfo, meta: {requiresAuth: true}},
         {path: 'addressList', name: 'addressList', component: AddressList, meta: {requiresAuth: true}},
-        {path: 'orderDetail', name: 'orderDetail', component: OrderDetail, meta: {requiresAuth: true}},
-        {path: 'support', name: 'support', component: Support, meta: {requiresAuth: true}}
+        {path: 'orderDetail', name: 'orderDetail', component: OrderDetail, meta: {requiresAuth: true}}
       ]
     },
     {path: '/cart', name: 'cart', component: Cart, meta: {requiresAuth: true}},

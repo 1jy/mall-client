@@ -1,57 +1,57 @@
 <template>
   <div id="app">
     <el-container>
-      <el-header class="header-style" v-if="this.whiteList.indexOf(this.$route.path) === -1">
-        <v-header/>
-      </el-header>
       <el-main>
         <router-view/>
       </el-main>
-      <el-footer v-if="this.whiteList.indexOf(this.$route.path) === -1">
-        <v-footer/>
-      </el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
 
-    import Header from "./components/common/Header";
-    import Footer from "./components/common/Footer";
+  import Header from "./components/header/Header";
+  import Footer from "./components/footer/Footer";
 
-    export default {
-        name: 'app',
-        data() {
-            return {
-                whiteList: ['/login', '/logout', '/register']
-            }
-        },
-        components: {
-            'v-header': Header,
-            'v-footer': Footer
-        }
+  export default {
+    name: 'app',
+    data() {
+      return {
+        whiteList: ['/login', '/register']
+      }
+    },
+    components: {
+      'jj-header': Header,
+      'jj-footer': Footer
     }
+  }
 </script>
-
 <style lang="scss">
-  html, body, #app {
-    width: 100%;
-    height: 100%;
+  * {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
 
-    .header-style {
-      padding: 0;
-      margin: 0;
-    }
+  html, body, #app {
+    width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 
     .el-main {
-      overflow-x: hidden;
+      padding: 0;
     }
   }
 
+  a:hover, a:link, a:visited {
+    color: #8c939d;
+  }
+
   html {
-    overflow-y: scroll;
+    overflow-x: hidden;
   }
 </style>

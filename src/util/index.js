@@ -20,7 +20,7 @@ export const flat2Tree = (json) => {
   return result
 };
 
-export const Storage =  {
+export const Storage = {
   get(key) {
     return window.localStorage.getItem(key)
   },

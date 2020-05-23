@@ -9,27 +9,35 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
     proxyTable: {
+      '/api/private/uploadAvatar': {
+        target: 'http://localhost:10011',
+        changeOrigin: true
+      },
       '/api/private/*': {
-        target: 'https://api.ne0.xyz/'
+        target: 'http://localhost:10012',
+        changeOrigin: true
       },
       '/api/public/login':{
-        target: 'https://sso.ne0.xyz/'
+        target: 'http://localhost:10011',
+        changeOrigin: true
+      },
+      '/api/public/register':{
+        target: 'http://localhost:10011',
+        changeOrigin: true
       },
       '/api/public/search': {
-        target: 'https://search.ne0.xyz/'
+        target: 'http://localhost:10013',
+        changeOrigin: true
+      },
+      '/api/public/content':{
+        target: 'http://localhost:10015',
+        changeOrigin: true
       },
       '/api/public/*': {
-        target: 'https://api.ne0.xyz/'
-      },
-
-      '/img/*': {
-        target: 'http://pzc84kvfi.bkt.clouddn.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/img': '/'
-        }
+        target: 'http://localhost:10012',
+        changeOrigin: true
       }
     },
 
@@ -39,8 +47,8 @@ module.exports = {
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
-    notifyOnErrors: true,
     https: true,
+    notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
     // Use Eslint Loader?

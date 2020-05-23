@@ -2,12 +2,12 @@ import http from './public.js'
 
 /** 登录账号 */
 export const userLogin = (params) => {
-  return http.fetchPost('https://sso.ne0.xyz/api/public/login', params)
+  return http.fetchPost('/api/public/login', params)
 };
 
 /** 注册账号 */
 export const register = (params) => {
-  return http.fetchPost('https://sso.ne0.xyz/api/public/register', params)
+  return http.fetchPost('/api/public/register', params)
 };
 
 /** 获取购物车列表 */
@@ -69,6 +69,11 @@ export const payment = (params) => {
 export const cancelOrder = (params) => {
   return http.fetchPost('/api/private/user/cancelOrder', params)
 };
+
+/** 上传头像 */
+export const uploadAvatar = (params) => {
+  return http.uploadFile('/api/private/uploadAvatar', params);
+}
 
 
 

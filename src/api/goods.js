@@ -17,12 +17,12 @@ export const checkout = (params) => {
 
 /** 获取商品分类 */
 export const listCategory = (params) => {
-  return http.fetchGet('/api/public/listCategory', params)
+  return http.fetchGet('/api/public/content/listCategory', params)
 };
 
 /** 获取首页板块列表 */
 export const listPanel = (params) => {
-    return http.fetchGet('/api/public/listPanel', params)
+  return http.fetchGet('/api/public/content/listPanel', params)
 };
 
 /** 获取商品评价列表 */
