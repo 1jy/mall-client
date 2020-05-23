@@ -36,14 +36,13 @@
 
   html, body, #app {
     width: 100vw;
-    max-height: 100vh;
-    overflow: hidden;
     background-color: #fff;
 
     font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 
     .el-main {
       padding: 0;
+      overflow: unset;
     }
   }
 

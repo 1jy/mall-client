@@ -1,5 +1,5 @@
 <template>
-  <div @scroll.passive="handleScroll" class="wrap">
+  <div @scroll.passive="handleScroll(e)" class="wrap">
     <jjHeader/>
     <div :class="!isFixed ? 'sticker-fixed' : 'sticker'" id="sticker">
       <div class="stick-wrap">
@@ -31,7 +31,7 @@
           </el-menu>
         </div>
       </el-aside>
-      <el-main width="980">
+      <el-main width="980" class="el-main">
         <keep-alive>
           <router-view></router-view>
         </keep-alive>
@@ -66,11 +66,17 @@
         return this.$store.getters.getUser.username;
       }
     },
+    mounted() {
+      window.addEventListener("scroll", this.handleScroll);
+    },
+    destroyed() {
+      window.removeEventListener('scroll', this.handleScroll)
+    },
     methods: {
-      handleScroll() {
-        let offsetTop = document.querySelector('#sticker').offsetTop;
+      handleScroll(e) {
+        const result = window.pageYOffset <= 36;
         // 如果小于等于头部高度
-        this.isFixed = offsetTop <= 36;
+        this.isFixed = result;
       },
       handleSelect(key) {
         this.$router.push({path: '/search', query: {query: key.value}});
@@ -110,7 +116,6 @@
 <style lang="scss">
   html, body, #app {
     background-color: #efefef;
-    overflow: hidden;
   }
 
   // 调整搜索框颜色
@@ -134,9 +139,6 @@
 
   .wrap {
     width: 100vw;
-    max-height: 100vh;
-    overflow: auto;
-    overflow-x: hidden;
 
     .sticker {
       position: sticky;
@@ -200,7 +202,8 @@
   }
 
   .el-main {
-    min-height: 950px;
+    display: block;
+    /*min-height: 950px;*/
     padding: 0;
   }
 

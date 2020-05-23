@@ -12,31 +12,31 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api/private/uploadAvatar': {
-        target: 'http://localhost:10011',
+        target: 'https://api.ne0.xyz',
         changeOrigin: true
       },
       '/api/private/*': {
-        target: 'http://localhost:10012',
+        target: 'https://api.ne0.xyz',
         changeOrigin: true
       },
       '/api/public/login':{
-        target: 'http://localhost:10011',
+        target: 'https://sso.ne0.xyz',
         changeOrigin: true
       },
       '/api/public/register':{
-        target: 'http://localhost:10011',
+        target: 'https://sso.ne0.xyz',
         changeOrigin: true
       },
       '/api/public/search': {
-        target: 'http://localhost:10013',
+        target: 'https://search.ne0.xyz',
         changeOrigin: true
       },
       '/api/public/content':{
-        target: 'http://localhost:10015',
+        target: 'https://content.ne0.xyz',
         changeOrigin: true
       },
       '/api/public/*': {
-        target: 'http://localhost:10012',
+        target: 'https://api.ne0.xyz',
         changeOrigin: true
       }
     },

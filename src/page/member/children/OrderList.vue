@@ -194,8 +194,7 @@
   .wrap {
     width: 930px;
     margin: auto;
-    overflow: hidden;
-    height: auto;
+    /*height: auto;*/
   }
 
   .order-wrap {
