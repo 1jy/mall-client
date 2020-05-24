@@ -153,7 +153,6 @@
 
 <style lang="scss" scoped>
   .warp {
-    width: 930px;
     margin: auto;
   }
 

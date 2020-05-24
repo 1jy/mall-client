@@ -177,7 +177,6 @@
 <style scoped>
 
   .wrap {
-    width: 930px;
     margin: auto;
   }
 

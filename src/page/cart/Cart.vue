@@ -280,7 +280,6 @@
 <style lang="scss">
   html, body, #app {
     background-color: #efefef;
-    overflow: hidden;
   }
 
   // 调整搜索框颜色

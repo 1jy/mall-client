@@ -147,7 +147,6 @@
 <style lang="scss">
   html, body, #app {
     background-color: #efefef;
-    overflow: hidden;
   }
   .el-input-group__append, .el-input-group__prepend {
     border: none;

@@ -30,17 +30,17 @@ function hasAdapt(){
   let userAgent = navigator.userAgent;
   console.log(userAgent);
   if(RegExp('^((MSIE [0-9])|(rv))$').test(userAgent)){
-    window.alert("暂不兼容此浏览器, 请更换 [Fire, Chrome, Edge] 浏览更佳.");
+    window.alert("暂不兼容此浏览器, 请更换 [FireFox, Chrome, Edge] 浏览更佳.");
     return false;
   }
 
   if(userAgent.indexOf("Android") !== -1){
-    window.alert("暂未对移动端设备适配处理, 请更换桌面端 [Fire, Chrome, Edge] 浏览更佳.");
+    window.alert("暂未对移动端设备适配处理, 请更换桌面端 [FireFox, Chrome, Edge] 浏览更佳.");
     return false;
   }
 
   if(userAgent.indexOf("iPhone") !== -1 || userAgent.indexOf("iPad") !== -1){
-    window.alert("暂未对移动端设备适配处理, 请更换桌面端 [Fire, Chrome, Edge] 浏览更佳.");
+    window.alert("暂未对移动端设备适配处理, 请更换桌面端 [FireFox, Chrome, Edge] 浏览更佳.");
     return false;
   }
   return true;

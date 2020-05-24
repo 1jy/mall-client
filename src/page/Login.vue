@@ -150,7 +150,6 @@
 <style lang="scss">
   html, body, #app {
     background-color: #efefef;
-    overflow: hidden;
   }
 </style>
 <style lang="scss" scoped>

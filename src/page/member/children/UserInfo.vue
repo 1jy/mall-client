@@ -58,7 +58,6 @@
 
 <style lang="scss" scoped>
   .wrap {
-    width: 930px;
     margin: auto;
 
     .avatar {

@@ -20,7 +20,7 @@
       </div>
     </div>
     <el-container class="content">
-      <el-aside width="220">
+      <el-aside width="221" class="el-aside">
         <div class="nav-warp">
           <el-avatar :src="getAvatar" class="avatar" shape="square"></el-avatar>
           <div class="username">{{getUsername}}</div>
@@ -31,7 +31,7 @@
           </el-menu>
         </div>
       </el-aside>
-      <el-main width="980" class="el-main">
+      <el-main>
         <keep-alive>
           <router-view></router-view>
         </keep-alive>
@@ -138,7 +138,7 @@
 <style lang="scss" scoped>
 
   .wrap {
-    width: 100vw;
+    position: relative;
 
     .sticker {
       position: sticky;
@@ -194,17 +194,18 @@
     }
   }
 
-
   .content {
+    position: relative;
+    width: 70%;
+    display: flex;
     margin: auto;
-    padding: 0;
-    width: 1200px;
   }
 
   .el-main {
     display: block;
-    /*min-height: 950px;*/
     padding: 0;
+    flex: 1;
+    margin-left: 20px;
   }
 
   .el-aside {

@@ -35,7 +35,7 @@
   }
 
   html, body, #app {
-    width: 100vw;
+    max-width: 100vw;
     background-color: #fff;
 
     font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
@@ -48,9 +48,5 @@
 
   a:hover, a:link, a:visited {
     color: #8c939d;
-  }
-
-  html {
-    overflow-x: hidden;
   }
 </style>

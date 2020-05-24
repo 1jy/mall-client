@@ -10,7 +10,7 @@
         <div style="width: 100px">数量</div>
         <div style="width: 100px">实付款</div>
         <div style="width: 100px">订单操作</div>
-        <div style="width: 178px">商品状态</div>
+        <div style="flex:1">商品状态</div>
       </div>
 
       <el-table :cell-style="getCellStyle"
@@ -192,7 +192,6 @@
 
 <style lang="scss" scoped>
   .wrap {
-    width: 930px;
     margin: auto;
     /*height: auto;*/
   }
